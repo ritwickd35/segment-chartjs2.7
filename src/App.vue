@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <chart/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import chart from './components/Chart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    chart
   }
 }
 </script>
@@ -24,5 +24,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 800px;
+  max-height: 500px;
 }
 </style>
