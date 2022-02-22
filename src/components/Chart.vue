@@ -112,14 +112,35 @@ export default {
               }
               if (isNaN(dat)) {
                 console.log("isNaN");
-                return "#d5e6f7";
-              } else return "#62de6a";
+                return "#effcf6";
+              } else return "#6dceaf";
               // (dat < 20 ? "lime" : "red")
             }),
+            fill: "origin",
+            borderWidth: 6,
+            // pointBackgroundColor: "#cc895d",
+            pointBorderColor: "#19676b",
           },
         ],
       },
-      options: {},
+      options: {
+        scales: {
+          xAxes: [
+            {
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+            },
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+              },
+            },
+          ],
+        },
+      },
     };
   },
 };
