@@ -53,16 +53,69 @@ export default {
   data() {
     return {
       chartdata: {
-        labels: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n' ],
+        labels: [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m",
+          "n",
+        ],
         datasets: [
           {
             label: "My First dataset",
             borderColor: "rgb(255, 99, 132)",
-            data: [0, 10, 15, 20, 25, 30, 27, 20, 15, 12, 19, 28, 37, 46],
+            data: [0, 10, 15, 20, 25, 30, 27, NaN, 15, 12, 19, 28, 37, 46],
             //first color is not important
-            colors: [0, 10, 15, 20, 25, 30, 27, 20, 15, 12, 19, 28, 37, 46].map(
-              (dat) => (dat < 20 ? "lime" : "red")
-            ),
+            // colors: [
+            //   0,
+            //   10,
+            //   15,
+            //   20,
+            //   25,
+            //   30,
+            //   27,
+            //   NaN,
+            //   15,
+            //   12,
+            //   19,
+            //   28,
+            //   37,
+            //   46,
+            // ]
+            colors: [
+              0,
+              10,
+              15,
+              20,
+              25,
+              30,
+              27,
+              NaN,
+              15,
+              12,
+              19,
+              28,
+              37,
+              46,
+            ].map((dat) => {
+              if (dat < 20) {
+                return "red";
+              }
+              if (isNaN(dat)) {
+                console.log("isNaN");
+                return "#d5e6f7";
+              } else return "#62de6a";
+              // (dat < 20 ? "lime" : "red")
+            }),
           },
         ],
       },
